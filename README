@@ -1,0 +1,29 @@
+=MYST=
+Twitter in Shell
+
+Author: Aditya Patawari <aditya@adityapatawari.com>
+Website: http://myst.adityapatawari.com
+License: AGPLv3
+Version: 0.25
+
+==Introduction==
+MYST is a python-twitter application. It can be used to tweet commandline.
+It uses oauth for authentication.
+
+==Authentication Method==
+Step 1: Open https://dev.twitter.com/apps/new
+Step 2: Fill the form. Put the name as 'MYST-<anything>' and website as 'http://myst.adityapatawari.com'
+Step 3: Check out the permissions in "settings" tab. Grant permission based on what you expect Myst to do.
+Step 4: Edit the conf file to put relevant details and place it in you home directory named as .myst.conf
+
+==What is monitor.sh?==
+monitor.sh is a simple script which collects some basic info about your machine.
+Idea is to create a private twitter account and you can put the follwing in a cron to get updates about your server's health:
+$ cd myst
+$ ./myst.py update `~/Documents/progs/monitor.sh`
+
+Make sure that you do not tweet anything which can expose your server's vulnerability. Stick to the default monitor.sh, if you are not sure.
+
+==What is system execution mode?==
+In system execution mode, your server will perform those tasks which are Directly Messaged (DM) to it, provided the person who is sending the DM is in authorized list of users.
+Just add the authorized users to ~/.myst.conf in a space separated fashion to "auth_users" in "Users" section.
