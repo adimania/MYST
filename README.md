@@ -2,7 +2,7 @@ MYST
 ====
 
 MYST is a python-twitter app for doing basic things in twitter, for now!
-
+```
 aditya@blackpanther:~/git-repos/MYST$ python myst.py -h
 
 Usage: myst.py [options]
@@ -24,4 +24,4 @@ Options:
   --postdm=USER_ID                 post Direct Message to a user
 
   -m, --mentions                   Tweets with your mention
-
+```
