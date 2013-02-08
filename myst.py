@@ -87,6 +87,12 @@ if options.getdm:
     if (system_execution == 1) and (dm.sender_screen_name in auth_users):
       os.system(dm.text)
 
+if options.postdm:
+  if options.uid:
+    user.PostDirectMessage(options.uid,options.postdm)
+  else:
+    print "Please use -u to specify a user id"
+
 if options.mentions:
   replies=user.GetReplies()
   for reply in replies:
