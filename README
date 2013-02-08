@@ -20,7 +20,7 @@ Step 4: Edit the conf file to put relevant details and place it in you home dire
 monitor.sh is a simple script which collects some basic info about your machine.
 Idea is to create a private twitter account and you can put the follwing in a cron to get updates about your server's health:
 $ cd myst
-$ ./myst.py update `~/Documents/progs/monitor.sh`
+$ ./myst.py -t `~/Documents/progs/monitor.sh`
 
 Make sure that you do not tweet anything which can expose your server's vulnerability. Stick to the default monitor.sh, if you are not sure.
 
